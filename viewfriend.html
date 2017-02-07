@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table ng-controller="FriendController as vn ">
+<tr>
+<td>NAME
+</td>
+
+<td>EMAIL_ID
+</td>
+
+<td>CONTACT
+</td>
+</tr>
+<tr ng-repeat="friend in vn.friends">
+<td> friend.friend_id</td>
+<td> friend.user_id</td>
+<td> friend.isonline</td>
+<td> friend.status</td>
+<td><button type="submit">ACCEPT</button></td>
+<td><button type="submit">REJECT</button></td>
+</tr>
+</table>
+</body>
+</html>

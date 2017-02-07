@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table  class="table table-hover" ng-controller="UserController as sd ">
+<tr>
+<td>USER_ID 
+</td>
+
+<td>NAME
+</td>
+
+<td>EMAIL_ID
+</td>
+
+<td>CONTACT
+</td>
+
+<td>STATUS
+</td>
+
+</tr>
+<tr ng-repeat="user in sd.users">
+<td>{{user.name}}</td>
+<td>{{user.email}}</td>
+<td>{{user.mobile_no}}</td>
+<td>{{user.address}}</td>
+<td>{{user.role}}</td>
+<td>{{user.gender}}</td>
+<td>{{user.username}}</td>
+<td>{{user.password}}</td>
+<td><button class="btn btn-info"  type="submit">ACCEPT</button></td>
+<td><button class="btn btn-danger" type="submit">REJECT</button></td>
+</tr>
+</table>
+<button class="btn btn-primary" type="submit">Back To Adminhome</button>
+
+</body>
+</html>
