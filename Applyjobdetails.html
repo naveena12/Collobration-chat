@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+<form>
+<input ng-model type="text" class="form-control" ng-controller="JobController as jd" class="table">
+<table >
+<tr >
+<td>
+JOB_TITLE:
+</td>
+<td>
+</tr>
+<tr>
+<td>
+DOMAIN:
+</td>
+</tr>
+<tr>
+<td>
+QUALIFICATION:
+</td>
+</tr>
+<tr>
+<td>
+EXPERIENCE:
+</td>
+</tr>
+<tr>
+<td>
+LOCATION:
+</td>
+</tr>
+<tr>
+<td>
+VACANCY:
+</td>
+</tr>
+<tr>
+<td>
+INTERVIEW_DATE:
+</td>
+</tr>
+<tr>
+<td>
+SALARY:
+</td>
+</tr>
+<tr ng-repeat="job in jd.jobs">
+<td>{{job.job_title}}</td>
+<td>{{job.Domain}}</td>
+<td>{{job.Qualification}}</td>
+<td>{{job.experience}}</td>
+<td>{{job.location}}</td>
+<td>{{job.vacancy}}</td>
+<td>{{job.interview_date}}</td>
+<td>{{job.salary}}</td>
+</table>
+<button  class="btn btn-primary" type="submit">APPLY</button>
+</form>
+</div>
+</body>
+</html>

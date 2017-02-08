@@ -26,25 +26,25 @@ app.factory('JobService',['$http','$q','$rootScope', function($http,$q,$rootScop
 					);
 		},
 
-		createJob:function(job){
-			return $http.post(Backendurl+'/applyForJob/'+jod.job_id,job).then(
-					function(response){
-						return response.data;
-					},
-					function(errResponse){
-						console.error('error while creating jobdetails');
-						return $q.reject(errResponse);
-					}
-					);
-		},
-	
-		createJob_application:function(job_application){
-			return $http.post(Backendurl+'/postAJob/',job_appliation).then(
+		createJob_application:function(job){
+			return $http.post(Backendurl+'/applyForJob/'+job.job_id,job).then(
 					function(response){
 						return response.data;
 					},
 					function(errResponse){
 						console.error('error while creating job_applicationdetails');
+						return $q.reject(errResponse);
+					}
+					);
+		},
+	
+		createJob:function(job_application){
+			return $http.post(Backendurl+'/postAJob/',job).then(
+					function(response){
+						return response.data;
+					},
+					function(errResponse){
+						console.error('error while creating jobdetails');
 						return $q.reject(errResponse);
 					}
 					);
